@@ -1,0 +1,153 @@
+body {
+   background-color: #4b4d5c;
+   color: #fff;
+}
+
+input {
+   outline: none;
+   background: none;
+   text-decoration: none;
+   border: none;
+   color: inherit;
+}
+
+button {
+   outline: none;
+   border: none;
+}
+
+.container {
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 20px;
+   background-color: #8a848d;
+   height: 120px;
+   width: 800px;
+   border-radius: 30px;
+}
+
+.button {
+   padding: 10px 30px;
+   border-radius: 8px;
+   cursor: pointer;
+   color: inherit;
+   box-shadow: 0px 2px 2px #000;
+   font-size: 18px;
+}
+
+.header__button {
+   background-color: #517eba;
+   margin-left: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 15px;
+}
+
+.header__clear {
+   background-color: #b24e51;
+   margin-right: 15px;
+   display: flex;
+   justify-content: space-between;
+   gap: 10px;
+   align-items: center;
+}
+
+.header__input {
+   height: 25px;
+   width: auto;
+   font-size: 18px;
+   letter-spacing: 1.3px;
+   color: #fff;
+   border-bottom: 1px solid #000;
+}
+
+.header input::placeholder {
+   color: #fff;
+}
+
+.tasks {
+   margin-top: 30px;
+   background-color: #8a848d;
+   min-height: 400px;
+   width: 800px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 30px;
+   padding: 10px 10px 20px 10px;
+}
+
+.tasks__btn {
+   margin-top: 15px;
+   display: flex;
+   justify-content: space-between;
+   gap: 30px;
+   min-width: 500px;
+   height: 22px;
+}
+
+.tasks button {
+   color: #e8e6e8;
+   outline: none;
+   background-color: inherit;
+   text-transform: uppercase;
+   cursor: pointer;
+   line-height: 1;
+}
+
+.tasks button:hover {
+   color: #f9f1f9;
+}
+
+.tasks__item {
+   margin-top: 25px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 500px;
+   border: 1px solid white;
+   border-top-right-radius: 8px;
+   border-bottom-left-radius: 8px;
+   padding: 0 10px;
+}
+
+.tasks__item p {
+   font-size: 18px;
+   line-height: 1.4;
+   letter-spacing: 1px;
+}
+
+.tasks__icons {
+   color: #000;
+   display: flex;
+   gap: 15px;
+}
+
+.icon .icon__check:hover {
+   color: red;
+}
+
+.icn {
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+}
+
+.icon button {
+   color: #000;
+}
+
+.icon button:hover {
+   color: rgb(152, 19, 19);
+}
+
+.page {
+   border-bottom: 3px solid blue;
+}
