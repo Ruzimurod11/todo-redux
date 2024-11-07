@@ -6,7 +6,6 @@ import { useAuthContext } from "../context";
 const AppRouter: React.FC = () => {
    const { isAuth } = useAuthContext();
 
-   console.log(isAuth);
    return isAuth ? (
       <Routes>
          {privateRoutes?.map((route) => {
