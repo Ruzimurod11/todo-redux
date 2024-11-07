@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import s from "./Login.module.css";
+import { useAuthContext } from "../context";
 
 const Login = () => {
-   const navigate = useNavigate();
+   const { setIsAuth } = useAuthContext();
    const [hasError, setHasError] = useState(false);
    const [formValid, setFormValid] = useState(false);
    const [emailDirty, setEmailDirty] = useState(false);
@@ -49,26 +49,8 @@ const Login = () => {
 
    const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
       e.preventDefault();
-
-      fetch("https://jsonplaceholder.typicode.com/users", {
-         method: "POST",
-         headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-         },
-         body: new URLSearchParams({
-            email,
-            password,
-         }),
-      })
-         .then((res) => {
-            if (res.ok) {
-               navigate("/home");
-            } else {
-               navigate("/login");
-               setHasError(true);
-            }
-         })
-         .catch((error) => console.log(error));
+      setIsAuth(true);
+      localStorage.setItem("auth", "true");
    };
 
    useEffect(() => {

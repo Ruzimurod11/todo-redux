@@ -1,16 +1,27 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
+import AppRouter from "./components/AppRouter";
+import { AuthContext } from "./context";
+import { useEffect, useState } from "react";
 
 const App = () => {
+   const [isAuth, setIsAuth] = useState(false);
+
+   useEffect(() => {
+      if (localStorage.getItem("auth")) {
+         setIsAuth(true);
+      }
+   }, []);
    return (
-      <BrowserRouter>
-         <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/" element={<Login />} />
-         </Routes>
-      </BrowserRouter>
+      <AuthContext.Provider
+         value={{
+            isAuth,
+            setIsAuth,
+         }}>
+         <BrowserRouter>
+            <AppRouter />
+         </BrowserRouter>
+      </AuthContext.Provider>
    );
 };
 

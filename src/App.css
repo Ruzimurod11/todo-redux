@@ -50,6 +50,14 @@ button {
    gap: 15px;
 }
 
+.header__button:hover {
+   background-color: #2860ab;
+}
+
+.header__button:active {
+   box-shadow: none;
+}
+
 .header__clear {
    background-color: #b24e51;
    margin-right: 15px;
@@ -57,6 +65,14 @@ button {
    justify-content: space-between;
    gap: 10px;
    align-items: center;
+}
+
+.header__clear:hover {
+   background-color: #6d2325;
+}
+
+.header__clear:active {
+   box-shadow: none;
 }
 
 .header__input {
@@ -70,6 +86,7 @@ button {
 
 .header input::placeholder {
    color: #fff;
+   opacity: 0.8;
 }
 
 .tasks {
